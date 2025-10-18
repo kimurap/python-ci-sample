@@ -9,6 +9,8 @@ on:
 jobs:
   lint-test:
     runs-on: ubuntu-latest
+    env:
+      PYTHONPATH: src    # ← これを追加
     strategy:
       matrix:
         python-version: [ "3.10", "3.11", "3.12" ]
